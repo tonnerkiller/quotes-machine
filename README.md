@@ -10,3 +10,6 @@ It needs some polishnig of the html/css part, and a restructuring of the
 code might make it easier to enhance. Additionally, it is not yet able 
 to deal with tweeting quotes that are longer than twitters maximum sign 
 rate, and there is no error handling.
+
+See it life on 
+[http://tonnerkiller.de/quotes-machine/](https://tonnerkiller.de/quotes-machine/)
