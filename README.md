@@ -12,4 +12,4 @@ to deal with tweeting quotes that are longer than twitters maximum sign
 rate, and there is no error handling.
 
 See it life on 
-[http://tonnerkiller.de/quotes-machine/](https://tonnerkiller.de/quotes-machine/)
+[http://tonnerkiller.de/quotes-machine/](http://tonnerkiller.de/quotes-machine/)
