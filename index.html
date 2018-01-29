@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Quotes Machine</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lobster" rel="stylesheet"> 
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+  <div class="row" id="headline-row">
+    <div class="col">
+      <h1 class="text-center" id="headline">The Quotes Machine</h1>
+    </div>
+  </div> <!-- row-->
+  <div class="row align-items-center" id="quotes-row"> 
+    <div class="col">
+      <div id="quotes-box"class="text-center">
+        <p class="quote">Quotes go here</p>
+        <p class="author text-right">Authors go here</p>
+        <p class="quotesource">Source of the Quote goes here</p>
+      </div>
+    </div>
+  </div>
+  <div class="row" id="buttons-row">
+    <div class="col-sm-7">
+      <div id="button-box">
+        <div class="social-buttons">
+          <button class="btn btn-info" title="Tweet it" id="tweetbutton" target="_blank"><i class="fa fa-twitter"></i></button>
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" title="Share on Hubzilla"><i class="hublogo-hubs"></i></button>
+          <!-- Modal -->
+          <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">What is your channel?</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Please give your channel in the form <i>channel@example.com</i></p>
+                  <input type="text" exampletext="channel@example.com" id="channel" title="Insert channel">
+                  <button class="btn btn-primary" title="Send" id="hubbutton">Send</button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- button-box -->
+    </div><!-- column -->
+    <div class="col-sm-5">
+          <button id="newquote" class="btn btn-primary" title="New Quote">New Quote</button>
+    </div>
+  </div> <!-- row end -->
+  
+  
+  
+  
+</div> <!-- class ="container"-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

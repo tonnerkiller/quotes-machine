@@ -1,0 +1,72 @@
+
+html, body, .container{
+  height:100%;
+  background:silver/*linear-gradient(38deg, black, orange, blue, white)*/;
+}
+
+
+.row{
+  height:33%;
+  margin:1px;
+  background-color:transparent;
+}
+
+#headline-row{
+  height:10%;
+}
+#quotes-row{
+  height:70%;
+  background-color:gray;
+  border-radius:50%;
+}
+
+.social-buttons button{
+  border-radius:50%;
+}
+
+#quotes-box{
+    font-family: 'Lobster', cursive;
+}
+
+.quote{
+  font-size: 36px;
+}
+
+.quotesource{
+  font-size: 12px;
+}
+
+h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+/*
+ * Provides inline logos and graphics for Hubzilla
+ *
+ * Logo designs by iko, SVGs by Treer
+ *
+ * --
+ *
+ * Usage: <i class="hublogo-6x hublogo-candy"/></i>
+
+retrieved from https://gitlab.com/Treer/hubzilla-graphics/raw/master/logo/logo.css
+as including it in codepen didn't work
+
+ */
+.hublogo-hubs:before {
+	content: "";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23fff'%3E%3Ccircle r='29' cx='88' cy='42'/%3E%3Ccircle r='20' cx='30' cy='70'/%3E%3Ccircle r='15' cx='76' cy='100'/%3E%3Cpath d='M88 42L30 70l46 30z' fill='none' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E");
+}
+
+/*derived from https://commons.wikimedia.org/wiki/File:GNU_Social_Image_Logo.svg*/
+.gnulogo:before{
+  content: "";
+	display: inline-block;
+  width:1em;
+  height:1em;
+  background-size:100%;
+  background-image:url("data:image/png;base64,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");
+}
