@@ -4,7 +4,6 @@ html, body{
   background:linear-gradient(38deg, black, orange, green, white);
 }
 
-
 .row{
   background-color:transparent;
 }
@@ -15,6 +14,7 @@ html, body{
 
 #quotes-box{
     font-family: 'Lobster', cursive;
+    background:linear-gradient(138deg, red, blue, white);
 }
 
 .quote{
