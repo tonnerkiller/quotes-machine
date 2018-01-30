@@ -23,7 +23,7 @@ html, body{
 #quotes-box{
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px black;
-    padding: 5%;
+    align: center;
     color: lightgoldenrodyellow;
 }
 
@@ -37,7 +37,8 @@ html, body{
 
 h1 {
   font-family: 'Gloria Hallelujah', cursive;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px black;
+  color: lightgoldenrodyellow;
   text-decoration:underline;
 }
 
