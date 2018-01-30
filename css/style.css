@@ -14,11 +14,6 @@ html, body, .container{
 #headline-row{
   height:10%;
 }
-#quotes-row{
-  height:70%;
-  background-color:gray;
-  border-radius:50%;
-}
 
 .social-buttons button{
   border-radius:50%;
