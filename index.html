@@ -12,28 +12,18 @@
 </head>
 
 <body>
-  <div class="container-fluid">
-    <div class="row" id="headline-row">
-      <div class="col">
+
         <h1 class="text-center" id="headline">The Quotes Machine</h1>
-      </div>
-    </div> <!-- row-->
-    <div class="row" id="quotes-row">
-      <div class="col">
-        <div id="quotes-box"class="text-center">
-          <p class="quote">Quotes go here</p>
+
+
+          <p class="quote text-center">Quotes go here</p>
           <p class="author text-right">Authors go here</p>
           <p class="quotesource">Source of the Quote goes here</p>
-        </div>
-      </div>
-    </div>
-    <div class="row" id="buttons-row">
-      <div class="col-sm-7">
-        <div id="button-box">
+
           <div class="social-buttons">
             <button class="btn btn-info" title="Tweet it" id="tweetbutton" target="_blank"><i class="fa fa-twitter"></i></button>
             <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal" title="Share on Hubzilla"><i class="hublogo-hubs"></i></button>
-
+          </div>
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
               <div class="modal-dialog">
@@ -53,16 +43,11 @@
                 </div>
               </div>
             </div>
-          </div>
+
           <!-- Modal end -->
-          </div>
-        </div> <!-- button-box -->
-      </div><!-- column -->
-      <div class="col-sm-5">
           <button id="newquote" class="btn btn-primary" title="New Quote">New Quote</button>
-      </div>
-    </div> <!-- row end -->
-  </div> <!-- class ="container"-->
+
+
 
   <!-- script tags below thais line -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
