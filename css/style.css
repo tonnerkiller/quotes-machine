@@ -20,10 +20,13 @@ html, body{
 
 }
 
+.author{
+  padding-right: 5%;
+}
+
 #quotes-box{
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px black;
-    padding: 50%;
     color: lightgoldenrodyellow;
 }
 
