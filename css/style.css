@@ -18,11 +18,8 @@ html, body{
   text-shadow: 1px 1px black;
   color: lightgoldenrodyellow;
   transform:rotate(90deg);
-  -moz-transform:rotate(90deg);
-  -o-transform:rotate(90deg);
-  -webkit-transform:rotate(90deg);
-  -ms-transform:rotate(90deg);
   
+
 }
 
 .author{
