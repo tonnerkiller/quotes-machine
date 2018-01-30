@@ -23,7 +23,7 @@ html, body{
 #quotes-box{
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px black;
-    align: center;
+    padding: 50%;
     color: lightgoldenrodyellow;
 }
 
