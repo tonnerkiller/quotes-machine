@@ -22,10 +22,7 @@ html, body{
   -o-transform:rotate(90deg);
   -webkit-transform:rotate(90deg);
   -ms-transform:rotate(90deg);
-  -webkit-transform-origin: 0 0;
-  -moz-transform-origin: 0 0;
-  -ms-transform-origin: 0 0;
-  -o-transform-origin: 0 0;
+  
 }
 
 .author{
