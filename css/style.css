@@ -1,7 +1,7 @@
 
 html, body{
   height:100%;
-  background:linear-gradient(38deg, black, orange, green, white);
+  background:linear-gradient(38deg, black, red, yellow);
 }
 
 .row{
@@ -10,6 +10,14 @@ html, body{
 
 .social-buttons button{
   border-radius:50%;
+}
+
+.quotes-row{
+
+}
+
+.buttons-row{
+
 }
 
 #quotes-box{
