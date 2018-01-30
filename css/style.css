@@ -22,7 +22,7 @@ html, body{
 
 #quotes-box{
     font-family: 'Lobster', cursive;
-    background:linear-gradient(138deg, red, blue, white);
+    margin 5px;
 }
 
 .quote{
