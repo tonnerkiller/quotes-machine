@@ -1,23 +1,12 @@
 
 html, body, .container{
   height:100%;
-  background:silver/*linear-gradient(38deg, black, orange, blue, white)*/;
+  background:linear-gradient(38deg, black, orange, green, white);
 }
 
 
 .row{
-  height:33%;
-  margin:1px;
   background-color:transparent;
-}
-
-#headline-row{
-  height:10%;
-}
-#quotes-row{
-  height:70%;
-  background-color:gray;
-  border-radius:50%;
 }
 
 .social-buttons button{
