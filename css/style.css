@@ -14,9 +14,6 @@ body{
   flex-direction:column;
 }
 
-.row{
-  background-color:transparent;
-}
 
 #all-buttons{
   display:flex;
@@ -78,16 +75,13 @@ body{
   font-size: 12px;
 }
 
-h1 {
+#headline{
+  display:flex;
+  align-self: center;
   font-family: 'Gloria Hallelujah', cursive;
   text-shadow: 1px 1px black;
   color: lightgoldenrodyellow;
   text-decoration:underline;
-}
-
-#headline{
-  display:flex;
-  align-self: center;
 }
 
 /*
