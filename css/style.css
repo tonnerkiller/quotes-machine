@@ -1,15 +1,49 @@
-
-html, body{
+html{
   height:100%;
   background:linear-gradient(38deg, black, red, orange);
+  background-attachment:fixed;
+}
+
+
+body{
+  height:100%;
+  background:transparent;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction:column;
 }
 
 .row{
   background-color:transparent;
 }
 
-.social-buttons button{
-  border-radius:50%;
+#all-buttons{
+  display:flex;
+  padding: 1em;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#bottom-content{
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.socbut{
+  margin: 1em;
+}
+
+.social-buttons{
+  display:flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+#newquote{
+  margin:1em;
 }
 
 #creator{
@@ -17,19 +51,23 @@ html, body{
   font-family: 'Gloria Hallelujah', cursive;
   text-shadow: 1px 1px black;
   color: lightgoldenrodyellow;
-
-
-
+  display:flex;
+  align-self: center;
 }
 
 .author{
-  padding-right: 5%;
+  padding-right: 1em;
 }
 
 #quotes-box{
     font-family: 'Lobster', cursive;
     text-shadow: 1px 1px black;
     color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+    padding: 1em;
 }
 
 .quote{
@@ -45,6 +83,11 @@ h1 {
   text-shadow: 1px 1px black;
   color: lightgoldenrodyellow;
   text-decoration:underline;
+}
+
+#headline{
+  display:flex;
+  align-self: center;
 }
 
 /*
@@ -65,7 +108,7 @@ as including it in codepen didn't work
 	display: inline-block;
 	width: 1em;
 	height: 1em;
-	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23fff'%3E%3Ccircle r='29' cx='88' cy='42'/%3E%3Ccircle r='20' cx='30' cy='70'/%3E%3Ccircle r='15' cx='76' cy='100'/%3E%3Cpath d='M88 42L30 70l46 30z' fill='none' stroke='%23fff' stroke-width='5'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128' fill='%23333'%3E%3Ccircle r='29' cx='88' cy='42'/%3E%3Ccircle r='20' cx='30' cy='70'/%3E%3Ccircle r='15' cx='76' cy='100'/%3E%3Cpath d='M88 42L30 70l46 30z' fill='none' stroke='%23333' stroke-width='5'/%3E%3C/svg%3E");
 }
 
 /*derived from https://commons.wikimedia.org/wiki/File:GNU_Social_Image_Logo.svg*/
