@@ -14,12 +14,17 @@
 <body>
 
         <h1 class="text-center" id="headline">The Quotes Machine</h1>
-
-        <div id="quotes-box">
-          <p class="quote text-center">Quotes go here</p>
-          <p class="author text-right">Authors go here</p>
-          <p class="quotesource text-center">Source of the Quote goes here</p>
-        </div><!-- quotes-box -->
+        <div id="center-box">
+          <div></div> <!-- empty div for layout reasons-->
+          <div id="quotes-box">
+            <p class="quote text-center">Quotes go here</p>
+            <p class="author text-right">Authors go here</p>
+            <p class="quotesource text-center">Source of the Quote goes here</p>
+          </div> <!-- quotes-box-->
+          <p id="app-creator">
+            by <a href="http://tonnerkiller.de">tonnerkiller</a>
+          </p>
+        </div><!-- center-box -->
         <div id="bottom-content">
           <div id="all-buttons"><!-- all-buttons-->
             <div class="social-buttons">
@@ -28,7 +33,9 @@
             </div>
             <button id="newquote" class="" title="New Quote">New Quote</button>
           </div><!-- all-buttons-->
-          <p id="creator" class ="text-center">by <a href="http://tonnerkiller.de">tonnerkiller</a></p>
+
+
+
         </div>
         <!-- Modal -->
         <div class="modal fade" id="myModal" role="dialog">
@@ -42,7 +49,7 @@
               <div class="modal-body">
                 <p>Please give your channel in the form <i>channel@example.com</i></p>
                 <input type="text" exampletext="channel@example.com" id="channel" title="Insert channel">
-                <button class="btn btn-primary" title="Send" id="hubbutton">Send</button>
+                <button class="btn btn-primary" title="Send" id="hubbutton" data-dismiss="modal">Send</button>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
