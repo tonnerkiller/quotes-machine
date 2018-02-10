@@ -22,48 +22,49 @@ var quoteSingleton = {
   credit: "",
   twitter: "",
   getTwitter:function(){
-    return twitter;
+    return this.twitter;
   },
   setTwitter:function(input){
-    twitter=input;
+    this.twitter=input;
   },
   getCredit:function(){
-    return credit;
+    return this.credit;
   },
   setCredit:function(input){
-    credit=input;
+    this.credit=input;
   },
   getText:function(){
-    return text;
+    return this.text;
   },
   setText:function(input){
-    text=input;
+    this.text=input;
   },
   getAuthor(){
-    return author;
+    return this.author;
   },
   setAuthor(input){
-    author=input;
+    this.author=input;
   }
 };
 /*---------------------Singleton Object "quoteSingleton"------------------------*/
 
 /*getQuote(apiList,quoteObject) chooses a random API from apiArray, retrieves quote and author from API in JSON form
 and fills data in respective quoteObject properties, also updates html classes quote and author respectively*/
-function getQuote(apiList,quoteObject){
-  var apiObject = apiList[Math.floor(apiArray.length*Math.random())];//get a random api
-  quoteObject.setCredit("Retrieved from: "+apiObject.credit);
-  quoteObject.setTwitter(apiObject.twitter);
-  $(".quotesource").html(quoteObject.getCredit());
+function getQuote(gqObject){
+  //console.log("inside getQuote");
+  var apiObject = gqObject.data.apiList[Math.floor(apiArray.length*Math.random())];//get a random api
+  gqObject.data.quoteObject.setCredit("Retrieved from: "+apiObject.credit);
+  gqObject.data.quoteObject.setTwitter(apiObject.twitter);
+  $(".quotesource").html(gqObject.data.quoteObject.getCredit());
   $.getJSON(apiObject.link).done(function(json){
     $.each(json,function(key,value){
         switch(key){
           case apiObject.quotekey:
-            quoteObject.setText(value);
+            gqObject.data.quoteObject.setText(value);
             $(".quote").html(value);
             break;
           case apiObject.authorkey:
-            quoteObject.setAuthor(value);
+            gqObject.data.quoteObject.setAuthor(value);
             $(".author").html(value);
             break;
         }
@@ -72,17 +73,22 @@ function getQuote(apiList,quoteObject){
 };
 /*----------------getQuote(apiList,quoteObject)------------------*/
 
+
+function hubshare(quoteObject){
+                  //get hub and channel name
+                  var fullchannel=document.getElementById("channel").value.split("@");
+                  var quote= "[quote="+quoteObject.data.getAuthor()+"]"+quoteObject.data.getText()+"[/quote]"+"<br/>[b]Credit: "+quoteObject.data.getCredit()+"[/b]";
+                  window.open("https://"+fullchannel[1]+"/rpost?&body="+quote+"&title=News from the Quotes Machine&channel="+fullchannel[0]);
+                };
+
+function tweet(quoteObject){
+                  window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp"+encodeURIComponent(", author of quotes app challange")+quoteObject.data.getTwitter()+encodeURIComponent(", author of API used")+",tonkllr"+encodeURIComponent(", author of Quotes Machine App")+"&text="+quoteObject.data.getText()+" - "+quoteObject.data.getAuthor());
+                };
+
+
 $("document").ready(function(){
-  getQuote(apiArray,quoteSingleton);
-  $("#tweetbutton").on('click',function(){
-                    window.open("https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp"+encodeURIComponent(", author of quotes app challange")+quoteSingleton.twitter+encodeURIComponent(", author of API used")+",tonkllr"+encodeURIComponent(", author of Quotes Machine App")+"&text="+quoteSingleton.getText()+" - "+quoteSingleton.getAuthor())});
-  $("#hubbutton").on('click', function(){
-                    //get hub and channel name
-                    var fullchannel=document.getElementById("channel").value.split("@");
-                    var quote= "[quote="+quoteSingleton.getAuthor()+"]"+quoteSingleton.getText()+"[/quote]"+"<br/>[b]Credit: "+quoteSingleton.getCredit()+"[/b]";
-                    window.open("https://"+fullchannel[1]+"/rpost?&body="+quote+"&title=News from the Quotes Machine&channel="+fullchannel[0]);
-                  });
-  $("#newquote").on('click',function(){
-                    getQuote(apiArray,quoteSingleton);
-  });
+  getQuote({data:{apiList: apiArray, quoteObject: quoteSingleton}});
+  $("#tweetbutton").on('click', quoteSingleton, tweet);
+  $("#hubbutton").on('click', quoteSingleton, hubshare);
+  $("#newquote").on('click', {apiList: apiArray, quoteObject: quoteSingleton}, getQuote);
 });
