@@ -1,12 +1,12 @@
 html{
   height:100%;
-  background:linear-gradient(38deg, black, red, orange);
-  background-attachment:fixed;
+
 }
 
 body{
   height:100%;
-  background:transparent;
+  background:linear-gradient(38deg, black, red, orange);
+  background-attachment:fixed;
 }
 
 #all{
