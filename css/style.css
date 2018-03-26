@@ -71,6 +71,7 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 1em;
+    background:transparent;
 }
 
 #quotes-box{
