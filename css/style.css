@@ -14,6 +14,7 @@ body{
   align-items: stretch;
   justify-content: space-between;
   flex-direction:column;
+  background: transparent;
 }
 
 
